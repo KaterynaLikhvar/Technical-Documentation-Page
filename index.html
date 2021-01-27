@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Technical Documentation Page</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav id="navbar">
+        <header>HTML Documentation</header>
+
+        <ul>
+            <li><a class="nav-link" href="#Getting_started_with_HTML">Getting started with HTML</a></li>
+            <li><a class="nav-link" href="#What_is_in_the_head">What is in the head</a></li>
+            <li><a class="nav-link" href="#HTML_text_fundamentals">HTML text fundamentals</a></li>
+            <li><a class="nav-link" href="#Creating_hyperlinks">Creating hyperlinks</a></li>
+            <li><a class="nav-link" href="#Document_and_website_structure">Document and website structure</a></li>
+            <li><a class="nav-link" href="#Debugging_HTML">Debugging HTML</a></li>
+            <li><a class="nav-link" href="#Images_in_HTML">Images in HTML</a></li>
+            <li><a class="nav-link" href="#Video_and_audio_content">Video and audio content</a></li>
+            <li><a class="nav-link" href="#Other_embedding_technologies">Other embedding technologies</a></li>
+            <li><a class="nav-link" href="#Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
+            <li><a class="nav-link" href="#Responsive_images">Responsive images</a></li>
+            <li><a class="nav-link" href="#HTML_table_basics">HTML table basics</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- Document section -->
+    <main id="main-doc">
+
+        <section class="main-section" id="Getting_started_with_HTML">
+            <header>Getting started with HTML</header>
+            <article>
+                <p><strong>HTML</strong> (Hypertext Markup Language) is not a programming language; it is a <i>markup language</i> used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer
+                    wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or <i>mark up</i> different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink
+                    to link to another page on the web, italicize words, and so on. For example, take the following line of content:</p>
+                <code>My cat is very grumpy</code>
+                <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (&lt;p&gt;) element:</p>
+                <code>&lt;p&gt;My cat is very grumpy&lt;/p&gt;</code>
+                <p>The main parts of our element are:</p>
+                <ol>
+                    <li><strong>The opening tag</strong>: This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the start
+                        of the paragraph is.
+                    </li>
+                    <li><strong>The closing tag</strong>: This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to
+                        include a closing tag is a common beginner error and can lead to strange results.</li>
+                    <li><strong>The content</strong>: This is the content of the element, which in this case is just text.</li>
+                    <li><strong>The element</strong>: The opening tag plus the closing tag plus the content equals the element.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section class="main-section" id="What_is_in_the_head">
+            <header>What is in the head</header>
+            <article>
+                <p>The HTML head is the contents of the <mark>&lt;head&gt;</mark> element — unlike the contents of the <mark>&lt;body&gt;</mark> element (which are displayed on the page when loaded in a browser), the head's content is not displayed on the
+                    page. Instead, the head's job is to contain metadata about the document. In the above example, the head is quite small:</p>
+
+                <code>&lt;head&gt;
+      &lt;meta charset="utf-8"&gt;
+      &lt;title&gt;My test page&lt;/title&gt;
+      &lt;/head&gt;</code>
+
+                <p>We've already seen the <mark>&lt;title&gt;</mark> element in action — this can be used to add a title to the document. This however can get confused with the <mark>&lt;h1&gt;</mark> element, which is used to add a top level heading to
+                    your body content — this is also sometimes referred to as the page title. But they are different things!</p>
+                <ul>
+                    <li>The <mark>&lt;h1&gt;</mark> element appears on the page when loaded in the browser — generally this should be used once per page, to mark up the title of your page content (the story title, or news headline, or whatever is appropriate
+                        to your usage.)</li>
+                    <li>The <mark>&lt;title&gt;</mark> element is metadata that represents the title of the overall HTML document (not the document's content.)</li>
+                </ul>
+                <p>Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document — the <mark>&lt;meta&gt;</mark> element. Of course, the other stuff we are talking about in this article could also be thought of as
+                    metadata too. There are a lot of different types of <mark>&lt;meta&gt;</mark> elements that can be included in your page's &lt;/head&gt;, but we won't try to explain them all at this stage, as it would just get too confusing. Instead,
+                    we'll explain a few things that you might commonly see, just to give you an idea.</p>
+                <p>In the example we saw above, this line was included:</p>
+                <code> &lt;meta charset="utf-8"&gt;</code>
+                <p>This element simply specifies the document's character encoding — the character set that the document is permitted to use <mark>utf-8</mark> is a universal character set that includes pretty much any character from any human language.
+                    This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="HTML_text_fundamentals">
+            <header>HTML text fundamentals</header>
+            <article>
+                <p>Most structured text consists of headings and paragraphs, whether you are reading a story, a newspaper, a college textbook, a magazine, etc.</p>
+                <p>Structured content makes the reading experience easier and more enjoyable.</p>
+                <p>In HTML, each paragraph has to be wrapped in a <mark>&lt;p&gt;</mark> element, like so:</p>
+                <code>&lt;p&gt;I am a paragraph, oh yes I am.&lt;/p&gt;</code>
+                <p>Each heading has to be wrapped in a heading element:</p>
+                <code>&lt;h1&gt;I am the title of the story.&lt;/h1&gt;</code>
+                <p>There are six heading elements — <mark>&lt;h1&gt;</mark>, <mark>&lt;h2&gt;</mark>, <mark>&lt;h3&gt;</mark>, <mark>&lt;h4&gt;</mark>, <mark>&lt;h5&gt;</mark>, and <mark>&lt;h6&gt;</mark>. Each element represents a different level of content
+                    in the document;
+                    <mark>&lt;h1&gt;</mark> represents the main heading, <mark>&lt;h2&gt;</mark> represents subheadings, <mark>&lt;h3&gt;</mark> represents sub-subheadings, and so on.</p>
+                <p>It's really up to you what exactly the elements involved represent, as long as the hierarchy makes sense. You just need to bear in mind a few best practices as you create such structures:</p>
+                <ul>
+                    <li>Preferably you should just use a single &lt;h1&gt; per page — this is the top level heading, and all others sit below this in the hierarchy.</li>
+                    <li>Make sure you use the headings in the correct order in the hierarchy. Don't use &lt;h3&gt;s to represent subheadings, followed by &lt;h2&gt;s to represent sub-subheadings — that doesn't make sense and will lead to weird results.</li>
+                    <li>Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such
+                        occasions, it is advisable to spread the content over multiple pages if possible.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Creating_hyperlinks">
+            <header>Creating hyperlinks</header>
+            <article>
+                <p>Hyperlinks are one of the most exciting innovations the Web has to offer. Well, they've been a feature of the Web since the very beginning, but they are what makes the Web <i>a Web</i> — they allow us to link our documents to any other
+                    document (or other resource) we want to, we can also link to specific parts of documents, and we can make apps available at a simple web address (contrast this to native apps, which have to be installed and all that business.) Just
+                    about any web content can be converted to a link, so that when clicked (or otherwise activated) it will make the web browser go to another web address (URL).</p>
+                <p>A basic link is created by wrapping the text (or other content, see Block level links) you want to turn into a link inside an <mark>&lt;a&gt;</mark> element, and giving it an <mark>href</mark> attribute (also known as a Hypertext Reference
+                    , or target) that will contain the web address you want the link to point to.</p>
+                <pre><code>&lt;p&gt;I'm creating a link to 
+      &lt;a href="https://www.mozilla.org/en-US/"&gt;
+      the Mozilla homepage&lt;/a&gt;. &lt;/p&gt;</code>
+                  </pre>
+                <p>Other tips:</p>
+                <ul>
+                    <li>Don't repeat the URL as part of the link text — URLs look ugly, and sound even uglier when a screen reader reads them out letter by letter.</li>
+                    <li>Don't say "link" or "links to" in the link text — it's just noise. Screen readers tell people there's a link. Visual users will also know there's a link, because links are generally styled in a different colour and underlined (this
+                        convention generally shouldn't be broken, as users are so used to it).</li>
+                    <li>Keep your link label as short as possible — long links especially annoy screen reader users, who have to hear the whole thing read out.</li>
+                    <li>Minimize instances where multiple copies of the same text are linked to different places. This can cause problems for screenreader users, who will often bring up a list of the links out of context — several links all labelled "click
+                        here", "click here", "click here" would be confusing.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Document_and_website_structure">
+            <header>Document and website structure</header>
+            <article>
+                <p>Webpages can and will look pretty different from one another, but they all tend to share similar standard components, unless the page is displaying a fullscreen video or game, is part of some kind of art project, or is just badly structured:</p>
+                <ul>
+                    <li>header
+                        <p>Usually a big strip across the top with a big heading and/or logo. This is where the main common information about a website usually stays from one webpage to another.</p>
+                    </li>
+                    <li>navigation bar
+                        <p>Links to the site's main sections; usually represented by menu buttons, links, or tabs. Like the header, this content usually remains consistent from one webpage to another — having an inconsistent navigation on your website will
+                            just lead to confused, frustrated users. Many web designers consider the navigation bar to be part of the header rather than a individual component, but that's not a requirement; in fact some also argue that having the two
+                            separate is better for accessibility, as screen readers can read the two features better if they are separate.</p>
+                    </li>
+                    <li>main content
+                        <p>A big area in the center that contains most of the unique content of a given webpage, for example the video you want to watch, or the main story you 're reading, or the map you want to view, or the news headlines, etc. This is
+                            the one part of the website that definitely will vary from page to page!</p>
+                    </li>
+                    <li>sidebar
+                        <p>Some peripheral info, links, quotes, ads, etc. Usually this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but
+                            there are also cases where you 'll find some recurring elements like a secondary navigation system.</p>
+                    </li>
+                    <li>footer
+                        <p>A strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually that information is not critical or secondary to
+                            the website itself. The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.</p>
+                    </li>
+                </ul>
+                <p>To implement such semantic mark up, HTML provides dedicated tags that you can use to represent such sections, for example:</p>
+                <ul>
+                    <li>header: <mark>&lt;header&gt;</mark></li>
+                    <li>navigation bar: <mark>&lt;nav&gt;</mark></li>
+                    <li>main content: <mark>&lt;main&gt;</mark>, with various content subsections represented by <mark>&lt;article&gt;</mark>, <mark>&lt;section&gt;</mark>, and <mark>&lt;div&gt;</mark> elements</li>
+                    <li>sidebar: <mark>&lt;aside&gt;</mark>; often placed inside &lt;main&gt;</li>
+                    <li>footer: <mark>&lt;footer&gt;</mark>.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Debugging_HTML">
+            <header>Debugging HTML</header>
+            <article>
+                <p>HTML is not as complicated to understand as Rust. HTML is not compiled into a different form before the browser parses it and shows the result (it is <i>interpreted</i>, not <i>compiled</i>). And HTML's element syntax is arguably a lot
+                    easier to understand than a "real programming language" like Rust, JavaScript, or Python. The way that browsers parse HTML is a lot more <b>permissive</b> than how programming languages are run, which is both a good and a bad thing.</p>
+                <p>So what do we mean by permissive? Well, generally when you do something wrong in code, there are two main types of error that you'll come across:
+                </p>
+                <ul>
+                    <li><b>Syntax errors:</b> These are spelling errors in your code that actually cause the program not to run, like the Rust error shown above. These are usually easy to fix as long as you are familiar with the language's syntax and know
+                        what the error messages mean.</li>
+                    <li><b>Logic errors:</b> These are errors where the syntax is actually correct, but the code is not what you intended it to be, meaning that program runs incorrectly. These are often harder to fix than syntax errors, as there isn't an
+                        error message to direct you to the source of the error.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="main-section" id="Images_in_HTML">
+            <header>Images in HTML</header>
+            <article>
+                <p>In order to put a simple image on a webpage, we use the <mark>&lt;img&gt;</mark> element. This is an empty element (meaning that it has no text content or closing tag) that requires a minimum of one attribute to be useful — <mark>src</mark>                    (sometimes spoken as its full title, <i>source</i>). The <mark>src</mark> attribute contains a path pointing to the image you want to embed in the page, which can be a relative or absolute URL, in the same way as <mark>&lt;a&gt;</mark>                    element href attribute values.
+                </p>
+                <p>So for example, if your image is called dinosaur.jpg, and it sits in the same directory as your HTML page, you could embed the image like so:</p>
+
+                <code>&lt;img src="dinosaur.jpg"&gt;</code>
+
+                <p>If the image was in an images subdirectory, which was inside the same directory as the HTML page (which Google recommends for SEO/indexing purposes), then you'd embed it like this:</p>
+
+                <code>&lt;img src="images/dinosaur.jpg"&gt;</code>
+
+                <p>You could embed the image using its absolute URL, for example:</p>
+
+                <pre><code>&lt;img src="https://www.example.com/images/
+                  dinosaur.jpg"&gt;</code>
+                  </pre>
+
+                <p>But this is pointless, as it just makes the browser do more work, looking up the IP address from the DNS server all over again, etc. You'll almost always keep the images for your website on the same server as your HTML.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Video_and_audio_content">
+            <header>Video and audio content</header>
+            <article>
+                <p>Web developers have wanted to use video and audio on the Web for a long time, ever since the early 2000s, when we started to have bandwidth fast enough to support any kind of video (video files are much larger than text or even images.)
+                    In the early days, native web technologies such as HTML didn't have the ability to embed video and audio on the Web, so proprietary (or plugin-based) technologies like <a href="https://en.wikipedia.org/wiki/Adobe_Flash" target="blanck">Flash</a>                    (and later,
+                    <a href="https://en.wikipedia.org/wiki/Microsoft_Silverlight" target="blanck">Silverlight</a>) became popular for handling such content. This kind of technology worked ok, but it had a number of problems, including not working well
+                    with HTML/CSS features, security issues, and accessibility issues.</p>
+                <p>A native solution would solve much of this if implemented correctly. Fortunately, a few years later the HTML5 specification had such features added, with the <mark>&lt;video&gt;</mark> and <mark>&lt;audio&gt;</mark> elements, and some
+                    shiny new JavaScript APIs for controlling them. We'll not be looking at JavaScript here — just the basic foundations that can be achieved with HTML.</p>
+                <p>The <mark>&lt;video&gt;</mark> element allows you to embed a video very easily. A really simple example looks like this:</p>
+
+                <pre><code>&lt;video src="rabbit320.webm" controls&gt;
+      &lt;p&gt;Your browser doesn't 
+      support HTML5 video. 
+      Here is a &lt;a href="rabbit320.webm"&gt;
+      link to the video&lt;/a&gt; instead.
+      &lt;/p&gt; 
+      &lt;/video&gt;</code>
+          </pre>
+
+                <p>The <mark>&lt;audio&gt;</mark> element works in exactly the same way as the &lt;video&gt; element, with a few small differences as outlined below. A typical example might look like so:
+
+                    <pre><code>&lt;audio controls&gt;
+      &lt;source src="viper.mp3" type="audio/mp3"&gt;
+      &lt;source src="viper.ogg" type="audio/ogg"&gt;
+      &lt;p&gt;Your browser doesn't support HTML5 
+      audio. 
+      Here is a &lt;a href="viper.mp3"&gt;
+      link to the audio&lt;/a&gt; 
+            instead.
+      &lt;/p&gt;
+      &lt;/audio&gt;</code>
+          </pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Other_embedding_technologies">
+            <header>Other embedding technologies</header>
+            <article>
+                <p>A long time ago on the Web, it was popular to use <b>frames</b> to create websites — small parts of a website stored in individual HTML pages. These were embedded in a master document called a <b>frameset</b>, which allowed you to specify
+                    the area on the screen that each frame filled, rather like sizing the columns and rows of a table. These were considered the height of coolness in the mid to late 90s, and there was evidence that having a webpage split up into smaller
+                    chunks like this was better for download speeds — especially noticeable with network connections being so slow back then. They did however have many problems, which far outweighed any positives as network speeds got faster, so you
+                    don't see them being used anymore.</p>
+                <p>A little while later (late 90s, early 2000s), plugin technologies became very popular, such as <a href="https://developer.mozilla.org/en-US/docs/Glossary/Java" target="blanck">Java Applets</a> and <a href="https://en.wikipedia.org/wiki/Adobe_Flash"
+                        target="blanck">Flash</a> — these allowed web developers to embed rich content into webpages such as video and animations, which just weren't available through HTML alone. Embedding these technologies was achieved through elements
+                    like <mark>&lt;object&gt;</mark>, and the lesser-used <mark>&lt;embed&gt;</mark>, and they were very useful at the time. They have since fallen out of fashion due to many problems, including accessibility, security, file size, and
+                    more; these days most mobile devices don't support such plugins anymore, and desktop support is on the way out.</p>
+                <p>Finally, the <mark>&lt;iframe&gt;</mark> element appeared (along with other ways of embedding content, such as <mark>&lt;canvas&gt;</mark>, <mark>&lt;video&gt;</mark>, etc.) This provides a way to embed an entire web document inside another
+                    one, as if it were an <mark>&lt;img&gt;</mark> or other such element, and is used regularly today.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Adding_vector_graphics_to_the_Web">
+            <header>Adding vector graphics to the Web</header>
+            <article>
+                <p>On the web, you'll work with two types of image — raster images, and vector images:</p>
+                <ol>
+                    <li>Raster images are defined using a grid of pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (<mark>.bmp</mark>),
+                        PNG (
+                        <mark>.png</mark>), JPEG (<mark>.jpg</mark>), and GIF (<mark>.gif</mark>).</li>
+                    <li>Vector images are defined using algorithms — a vector image file contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The SVG format allows us to create
+                        powerful vector graphics for use on the Web.</li>
+                </ol>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="blanck">SVG</a> is an XML-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the
+                    shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like <mark>&lt;circle&gt;</mark>                    and
+                    <mark>&lt;rect&gt;</mark>. More advanced SVG features include <mark>&lt;feColorMatrix&gt;</mark> (transform colors using a transformation matrix,) <mark>&lt;animate&gt;</mark> (animate parts of your vector graphic,) and <mark>&lt;mask&gt;</mark>                    (apply a mask over the top of your image.)</p>
+                <p>As a simple example, the following code creates a circle and a rectangle:</p>
+
+                <pre><code>&lt;svg version="1.1"
+       baseProfile="full" 
+       width="300" height="200"
+       xmlns="http://www.w3.org/2000/svg"&gt;
+      &lt;rect width="100%" height="100%" 
+      fill="black" /&gt;
+      &lt;circle cx="150" cy="100" r="90" 
+      fill="blue" /&gt;
+      &lt;/svg&gt;</code>
+        </pre>
+
+                <p>From the example above, you may get the impression that SVG is easy to handcode. Yes, you can handcode simple SVG in a text editor, but for a complex image this quickly starts to get very difficult. For creating SVG images, most people
+                    use a vector graphics editor like
+                    <a href="https://inkscape.org/" target="blanck">Inkscape</a> or
+                    <a href="https://en.wikipedia.org/wiki/Adobe_Illustrator" target="blanck">Illustrator</a>. These packages allow you to create a variety of illustrations using various graphics tools, and create approximations of photos (for example
+                    Inkscape's Trace Bitmap feature).</p>
+                <p>To embed an SVG via an &lt;img&gt; element, you just need to reference it in the src attribute as you'd expect. You will need a height or a width attribute (or both if your SVG has no inherent aspect ratio). If you have not already done
+                    so, please read Images in HTML.</p>
+
+                <code>&lt;img 
+      src="equilateral.svg" 
+      alt="triangle with all three sides equal"
+      height="87px"
+                   width="100px" /&gt;</code>
+
+                <p>You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your <b>SVG inline</b>, or <b>inlining SVG</b>. Make sure your SVG code snippet begins and ends
+                    with the &lt;svg&gt;&lt;/svg&gt; tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:</p>
+
+                <pre>
+      <code>&lt;svg width="300" height="200"&gt;
+      &lt;rect width="100%" height="100%" 
+      fill="green" /&gt;
+      &lt;/svg&gt;</code>
+    </pre>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Responsive_images">
+            <header>Responsive images</header>
+            <article>
+                <p>Let's examine a typical scenario. A typical website may contain a header image and some content images below the header. The header image will likely span the whole of the width of the header, and the content image will fit somewhere inside
+                    the content column. Here's a simple example:</p>
+                <img src="/Images/picture-element-wide.png" alt="picture-element-wide">
+                <p>This works well on a wide screen device, such as a laptop or desktop. We won't discuss the CSS much in this lesson, except to say that:</p>
+                <ul>
+                    <li>The body content has been set to a maximum width of 1200 pixels — in viewports above that width the body remains at 1200px and centers itself in the available space. In viewports below that width, the body will stay at 100% of the
+                        width of the viewport.
+                    </li>
+                    <li>The header image has been set so that its center always stays in the center of the header, no matter what width the heading is set at. If the site is being viewed on a narrower screen, the important detail in the center of the image
+                        (the people) can still be seen, and the excess is lost off either side. It is 200px high.</li>
+                    <li>The content images have been set so that if the body element becomes smaller than the image, the images start to shrink so that they always stay inside the body, rather than overflowing it.</li>
+                </ul>
+                <p>However, issues arise when you start to view the site on a narrow screen device. The header below looks ok, but it's starting to take up a lot of the screen height for a mobile device. At this size, it is difficult to see the people within
+                    the first content image.</p>
+                <img src="/Images/non-responsive-narrow.png" alt="non-responsive-narrow">
+                <p>When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. This is a useful technique, which has shaved an average of 20% off
+                    page load times. However, it is not helpful for responsive images, hence the need to implement solutions like <mark>srcset</mark>. For example, you couldn't load the &lt;img&gt; element, then detect the viewport width with JavaScript,
+                    and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="HTML_table_basics">
+            <header>HTML table basics</header>
+            <article>
+                <p>A table is a structured set of data made up of of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and
+                    their age, or a day or the week, or the timetable for a local swimming pool.</p>
+                <img src="/Images/numbers-table.png" alt="numbers-table">
+                <p>You can also have a <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">look at the live example</a> on GitHub! One thing you'll notice is that the table does look a bit more readable there —
+                    this is because the table you see above on this page has minimal styling, whereas the GitHub version has more significant CSS applied.</p>
+                <p>Let's start by looking at a typical HTML table. Well, I say typical — most HTML table examples are about shoes, or the weather, or employees; we decided to make things more interesting by making it about famous punk bands from the UK.
+                    The markup looks like so:</p>
+
+                <pre>
+                <code>&lt;table&gt;
+    &lt;caption&gt;A summary of the UK's most 
+    famous punk bands&lt;/caption&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th scope="col">Band&lt;/th&gt;
+        &lt;th scope="col">Year formed&lt;/th&gt;
+        &lt;th scope="col">No. of Albums&lt;/th&gt;
+        &lt;th scope="col">Most famous song&lt;/th&gt;
+       &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;Buzzcocks&lt;/th&gt;
+        &lt;td&gt;1976&lt;/td&gt;
+        &lt;td&gt;9&lt;/td&gt;
+        &lt;td&gt;Ever fallen in love 
+        (with someone you shouldn't've)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;The Clash&lt;/th&gt;
+        &lt;td&gt;1976&lt;/td&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;London Calling&lt;/td&gt;
+      &lt;/tr&gt;
+         
+        ... some rows removed for brevity
+  
+      &lt;tr&gt;
+        &lt;th scope="row"&gt;The Stranglers&lt;/th&gt;
+        &lt;td&gt;1974&lt;/td&gt;
+        &lt;td&gt;17&lt;/td&gt;
+        &lt;td&gt;No More Heroes&lt;/td&gt;
+       &lt;/tr&gt;
+     &lt;/tbody&gt;
+     &lt;tfoot&gt;
+       &lt;tr&gt;
+         &lt;th scope="row" colspan="2"&gt;
+         Total albums &lt;/th&gt;
+        &lt;td colspan="2"&gt;77&lt;/td&gt;
+      &lt;/tr&gt;
+     &lt;/tfoot&gt;
+          &lt;/ttable&gt;</code>
+          </pre>
+
+                <p>The table is nicely marked up, easily styleable, and accessible, thanks to features such as <mark>scope</mark>, <mark>&lt;caption&gt;</mark>, <mark>&lt;thead&gt;</mark>, <mark>&lt;tbody&gt;</mark>, etc. Unfortunately, it doesn't look good
+                    when rendered on the screen (see it live at <a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a>).</p>
+                <p>It just looks cramped, hard to read, and boring. We need to use some <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> to fix this up.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/">MDN.</a></p>
+            </article>
+        </section>
+
+    </main>
+</body>
+
+</html>
